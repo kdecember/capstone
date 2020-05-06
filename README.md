@@ -67,14 +67,14 @@ The goal is to maximize this Relavance Metric in the hopes that each game recomm
 
 My initial model had a Relevance Score of 16%, while the best model scored around 40%. Ultimately, the most important parameter was the training epochs; allowing for more training epochs produced a model with larger Relevance Scores 
 
-This is a long way off from the ideal recommendation system, but we have at least made the first step away from simply recommending other popular games.
+This is a long way off from the ideal recommendation system, but we have made the first step towards content-based recommendations.
 
 ### Future Improvements
 
-After evaluating the models, it became apparent that I need more data as well as more time. The first thing I would do in the future would be to scrape Steam's website for the actual descriptions of the games, as well as whether or not the user gave a "thumbs up" or "thumbs down" on their review. I would also make sure to remove all non-games from the dataset.
+After evaluating the models, it became apparent that I need more data as well as more time. The first thing I would do in the future would be to scrape Steam's website for the actual descriptions of the games, as well as whether or not the user gave a "thumbs up" or "thumbs down" on their review. I would also make sure to remove all non-games from the dataset. Time is an important element because the most influential parameter for improving the models was how many epochs they were allowed to run; more epochs allows for more document specific word embeddings and therefore a greater understanding of the context of each game.
 
-Collaborative recommendation systems could also be worth testing. My only worry with collaborative systems is that they recommend things that other people have already played, which can function as a proxy for recommending already popular games.
+Collaborative recommendation systems could also be worth testing. My only worry with collaborative systems is they recommend things other people have already played, which can function as a proxy for recommending already popular games.
 
-Ultimately, I would like to build a website that focuses on users providing a description of the game after they've played it, rather than a simple review. This would differ from Steam in that it would provide a scaled rating system in addition to the description-focused review system.
+Ultimately, I would like to build a website that focuses on users providing a description of the game after they've played it, rather than a simple review. This would differ from Steam in that it would provide a scaled rating system in addition to the description-focused reviews.
 
 I would also like to implement the use of categorical tags, such as "RPG", "Strategy", "FPS", "MMO", "Turn-based" to further narrow down on the games being recommended.

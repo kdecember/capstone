@@ -1,8 +1,8 @@
 ## Instructions for downloading the initial data files
 
-Before running the final_notebook.ipynb, download the following 2 files and perform the following steps:  
-http://cseweb.ucsd.edu/~wckang/steam_reviews.json.gz  
-http://cseweb.ucsd.edu/~wckang/steam_games.json.gz
+Before running the [final notebook](../notebooks/report/final_notebook.ipynb), download the following 2 files and perform the following steps:  
+[Reviews](http://cseweb.ucsd.edu/~wckang/steam_reviews.json.gz)  
+[Games](http://cseweb.ucsd.edu/~wckang/steam_games.json.gz)
 
 
 1) unzip the files  
