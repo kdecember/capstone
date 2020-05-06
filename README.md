@@ -34,7 +34,7 @@ The files of importance are "Version 2: Review Data" and "Version 2: Item Metada
 
 Please see the README.md in the /data directory for a thorough walkthrough of the downloading process, and conversion to the CSV format for my coding purposes.
     
-I passed the information into a Pandas dataframe, which resulted in over 7,000,000 rows and 15 columns. This dataframe represents 7,000,000 reviews spread acress roughly 35,000 unique games. The goal of the project is to implement a content-based system, and therefore the most important columns are the 'text' and 'product_id'.
+I passed the information into a Pandas dataframe, which resulted in over 7,000,000 rows and 15 columns. This dataframe represents 7,000,000 reviews spread across roughly 35,000 unique games. The goal of the project is to implement a content-based system, and therefore the most important columns are the 'text' and 'product_id'.
     
 ### Data Preperation
 
