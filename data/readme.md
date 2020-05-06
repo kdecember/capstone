@@ -1,6 +1,6 @@
 ## Instructions for downloading the initial data files
 
-Download the following 2 files
+Download the following 2 files  
 http://cseweb.ucsd.edu/~wckang/steam_reviews.json.gz  
 http://cseweb.ucsd.edu/~wckang/steam_games.json.gz
 
