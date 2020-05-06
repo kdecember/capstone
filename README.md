@@ -53,14 +53,9 @@ Having already cleaned the text data, I needed to process it through Doc2Vec for
 
 ### Evaluation
 
-Since the modeling method is untraditional, I created a custom metric by which to measure the performance of each model. I generated 5 unique descriptions for a user's "ideal game", each of which is assigned 5 game recommendations. I manually checked the descriptions and gameplay videos of the recommended games in order to determine their relevance to the description. If the recommended game was relevant (i.e. having similar elements to the description itself), then the recommendation was given a score of 1. On the otherhand, if the recommended game was irrelevant then it was given a score of 0. Each model's performance is evaluated on the percentage of recommended games which were relevant to the different descriptions: (relavant recs) / 25
+Since the modeling method is untraditional, I created a custom metric by which to measure the performance of each model. I generated 5 unique descriptions for a user's "ideal game", each of which is assigned 5 game recommendations. I manually checked the descriptions and gameplay videos of the recommended games in order to determine their relevance to the description. If the recommended game was relevant (i.e. having similar elements to the description itself), then the recommendation was given a score of 1. On the otherhand, if the recommended game was irrelevant then it was given a score of 0. Each model's performance is evaluated on the percentage of recommended games which were relevant to the different descriptions: (total relavant recommendations) / 25
 
 The goal is to maximize this Relavance Metric in the hopes that each game recommended is relavant to the description given.
 
-# Miscellaneous Reqs.
+### Future Improvements
 
-### Readme Content
-
-### Notebook Content
-
-### Presentation Content / Style
