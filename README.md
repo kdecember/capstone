@@ -32,9 +32,13 @@ Please be sure to follow the instructions @ the top of the webpage for unpacking
 
 The files of importance are "Version 2: Review Data" and "Version 2: Item Metadata". These 2 files can be merged along 'reviews:product_id' and 'games:id' categories. As the Games information is only relevant once the recommendation is complete, the primary focus of our data preparation and cleaning is the Reviews file.
     
+<<<<<<< HEAD
 I passed the information into a Pandas dataframe, which resulted in over 7,000,000 rows and 15 columns. This dataframe represents 7,000,000 reviews spread acress roughly 35,000 unique games. The goal of the project is to implement a content-based system, and therefore the most important columns are the 'text' and 'product_id'.
 
 After reviewing the contents, it became apparent there was no rating system of any kind, nor was there a comprehensive description of the games themselves. The best approximation of a game description will be the aggregated reviews provided by the users themselves. Even though this is far from ideal, it will serve our purpose for proof-of-concept.
+=======
+I passed the information into a Pandas dataframe, which resulted in over 7,000,000 rows and 15 columns. This dataframe represents 7,000,000 reviews spread across roughly 35,000 unique games. The goal of the project is to implement a content-based system, and therefore the most important columns are the 'text' and 'product_id'.
+>>>>>>> be00070995af987b025d89e2d6376e8fbda7998b
     
 ### Data Preparation
 
@@ -53,11 +57,12 @@ Having already cleaned the text data, I needed to process it through Doc2Vec for
 
 ### Evaluation
 
-Since the modeling method is untraditional, I created a custom metric by which to measure the performance of each model. I generated 5 unique descriptions for a user's "ideal game", each of which is assigned 5 game recommendations. I manually checked the descriptions and gameplay videos of the recommended games in order to determine their relevance to the description. If the recommended game was relevant (i.e. having similar elements to the description itself), then the recommendation was given a score of 1. On the otherhand, if the recommended game was irrelevant then it was given a score of 0. Each model's performance is evaluated on the percentage of recommended games which were relevant to the different descriptions: (relavant recs) / 25
+Since the modeling method is untraditional, I created a custom metric by which to measure the performance of each model. I generated 5 unique descriptions for a user's "ideal game", each of which is assigned 5 game recommendations. I manually checked the descriptions and gameplay videos of the recommended games in order to determine their relevance to the description. If the recommended game was relevant (i.e. having similar elements to the description itself), then the recommendation was given a score of 1. On the otherhand, if the recommended game was irrelevant then it was given a score of 0. Each model's performance is evaluated on the percentage of recommended games which were relevant to the different descriptions: (total relavant recommendations) / 25
 
 The goal is to maximize this Relavance Metric in the hopes that each game recommended is relavant to the description given.
 
 ### Future Improvements
+<<<<<<< HEAD
 
 After evaluating the models, it became apparent that I need more data. The first thing I would do in the future would be to scrape Steam's website for the actual descriptions of the games, as well as whether or not the user gave a "thumbs up" or "thumbs down" on their review.
 
@@ -66,3 +71,6 @@ Collaborative recommendation systems could also be worth testing. My only worry 
 Ultimately, I would like to build a website that focuses on users providing a description of the game after they've played it, rather than a simple review. This would differ from Steam in that it would provide a scaled rating system in addition to the description-focused review system.
 
 I would also like to implement the use of categorical tags, such as "RPG", "Strategy", "FPS", "MMO", "Turn-based" to further narrow down on the games being recommended.
+=======
+
+>>>>>>> be00070995af987b025d89e2d6376e8fbda7998b
