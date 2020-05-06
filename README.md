@@ -31,16 +31,16 @@ Please be sure to follow the instructions @ the top of the webpage for unpacking
     SIGIR, 2017  
 
 The files of importance are "Version 2: Review Data" and "Version 2: Item Metadata". These 2 files can be merged along 'reviews:product_id' and 'games:id' categories. As the Games information is only relevant once the recommendation is complete, the primary focus of our data preparation and cleaning is the Reviews file.
-
-Please see the README.md in the /data directory for a thorough walkthrough of the downloading process, and conversion to the CSV format for my coding purposes.
     
 I passed the information into a Pandas dataframe, which resulted in over 7,000,000 rows and 15 columns. This dataframe represents 7,000,000 reviews spread acress roughly 35,000 unique games. The goal of the project is to implement a content-based system, and therefore the most important columns are the 'text' and 'product_id'.
+
+After reviewing the contents, it became apparent there was no rating system of any kind, nor was there a comprehensive description of the games themselves. The best approximation of a game description will be the aggregated reviews provided by the users themselves. Even though this is far from ideal, it will serve our purpose for proof-of-concept.
     
-### Data Preperation
+### Data Preparation
 
 Please see the README.md in the /data/ directory for a thorough walkthrough of the downloading process, and conversion to the CSV format. The remainder of the data preparation is summarized here. 
 
-The exact coding process for cleaning the data can be found in the first few cells of the final_notebook under the report folder. Here, I will provide a brief overview of the methodology. First, Seeking to lower the amount of data for processing, I removed all unnecessary columns such as "found_funny", for example. Second, I removed all rows with null values in any of the columns. Third, I removed all the reviews that were based on less that 1 hour of gameplay (not sufficient game time for accurate review). Fourth, I calculated the total reviews for each game and subsequently removed all games with less than 500 total reviews (not sufficient data to describe the game).
+The exact coding process for cleaning the data can be found in the final cells of data_creation.ipynb under the /data/ section. Here, I will provide a brief overview of the methodology. First, Seeking to lower the amount of data for processing, I removed all unnecessary columns such as "found_funny", for example. Second, I removed all rows with null values in any of the columns. Third, I removed all the reviews that were based on less that 1 hour of gameplay (not sufficient game time for accurate review). Fourth, I calculated the total reviews for each game and subsequently removed all games with less than 500 total reviews (not sufficient data to describe the game).
     
 Once the data was parameterized within reason, as determined by the problem domain, I then needed to clean the text before vectorizing it. First, I removed any punctuation or numbers within the text reviews. Second, I used NLTK's built in tokenize function to tokenize the text in each row. Third, I used NLTK's english stop_words list to remove any unnecessary words for classification. For example, stop_words will normally include words such as "I", "the", "and", "it", because these words are fairly universal among all subjects and therefore provide no benefit when performing classification. This final column was named 'clean_data' to preserve the original form.
     
@@ -57,10 +57,12 @@ Since the modeling method is untraditional, I created a custom metric by which t
 
 The goal is to maximize this Relavance Metric in the hopes that each game recommended is relavant to the description given.
 
-# Miscellaneous Reqs.
+### Future Improvements
 
-### Readme Content
+After evaluating the models, it became apparent that I need more data. The first thing I would do in the future would be to scrape Steam's website for the actual descriptions of the games, as well as whether or not the user gave a "thumbs up" or "thumbs down" on their review.
 
-### Notebook Content
+Collaborative recommendation systems could also be worth testing. My only worry with collaborative systems is that they recommend things that other people have already played, which can function as a proxy for recommending already popular games.
 
-### Presentation Content / Style
+Ultimately, I would like to build a website that focuses on users providing a description of the game after they've played it, rather than a simple review. This would differ from Steam in that it would provide a scaled rating system in addition to the description-focused review system.
+
+I would also like to implement the use of categorical tags, such as "RPG", "Strategy", "FPS", "MMO", "Turn-based" to further narrow down on the games being recommended.
