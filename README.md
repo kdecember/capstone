@@ -44,7 +44,7 @@ I passed the information into a Pandas dataframe, which resulted in over 7,000,0
     
 ### Data Preparation
 
-Please review the [README.md](./data/README.md) in the /data/ directory for a thorough walkthrough of the downloading process, and conversion to the CSV format. The remainder of the data preparation is summarized here. 
+Please review the [README.md](./data/readme.md) in the /data/ directory for a thorough walkthrough of the downloading process, and conversion to the CSV format. The remainder of the data preparation is summarized here. 
 
 The exact coding process for cleaning the data can be found in the final cells of data_creation.ipynb under the /data/ section. Here, I will provide a brief overview of the methodology. First, Seeking to lower the amount of data for processing, I removed all unnecessary columns such as "found_funny", for example. Second, I removed all rows with null values in any of the columns. Third, I removed all the reviews that were based on less that 1 hour of gameplay (not sufficient game time for accurate review). Fourth, I calculated the total reviews for each game and subsequently removed all games with less than 500 total reviews (not sufficient data to describe the game). Finally, once the preliminary filtering was complete, I took a subsample of 250,000 reviews in order to account for processing limitations. 
     
