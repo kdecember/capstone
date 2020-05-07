@@ -7,6 +7,6 @@ Before running the [final notebook](../notebooks/report/final_notebook.ipynb), d
 
 1) unzip the files  
 2) move the unzipped JSON files to this location in the repo  
-3) run the first code cell in data_creation.ipynb  
+3) run the first code cell in this [notebook](./data_creation.ipynb)  
 4) keep the resulting csv files in this location in the repo, do not move them  
 5) return to the [final notebook](../notebooks/report/final_notebook.ipynb)
