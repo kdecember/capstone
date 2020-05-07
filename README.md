@@ -2,7 +2,7 @@
 
 ### Note to Developers
 
-The polished analysis can be found in the [reports](https://github.com/kdecember/capstone/tree/master/notebooks/report) section of this repo; please disregard notebooks in the exploratory sections as they include preliminary and undocumented work. To run the [final notebook](./notebooks/report/final_notebook.ipynb) in this repo, please setup a virtual conda environment with [this file](./environment.yml)
+The polished analysis can be found in the [reports](https://github.com/kdecember/capstone/tree/master/notebooks/report) section of this repo; please disregard notebooks in the exploratory sections as they include preliminary and undocumented work. To run the [final notebook](./notebooks/report/final_notebook.ipynb) in this repo, please setup a virtual conda environment with [this file](./environment.yml). Instructions can be found [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) for managing setup.
 
 
 ### Business Understanding
